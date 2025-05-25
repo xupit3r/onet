@@ -1,2 +1,8 @@
 const assert = require('assert');
-const onex = require('../onet.js');
+const onet = require('../onet.js');
+
+describe("onet should generate a node of one", () => {
+  const netOfOne = onet("net of one");
+
+  console.log(netOfOne.hello());
+});

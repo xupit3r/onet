@@ -4,27 +4,26 @@
  * @param {string} name a nice little name for your network 
  * @returns a network
  */
-export const onet = name => {
-  let network = this;
+
+export const onet = (networkName) => {
+  let network = this
   let neighbors = [];
 
-  return function* (thing) {
-    let version = 0
-    let bind = () => {
-      neighbors = [...neighbors, thing];
-      thing.add(network);
-    }
+  network.add = function* (name) {
+    let node = this;
+
+    node.version = 0
+    node.id = () => `${node.name}.${node.version})`
+
+    neighbors = [...neighbors, network.add(name)];
+    version++
 
     while (true) {
-      version++
-      bind(thing)
-
-      yield {
-        name,
-        version,
-        neighbors,
-        bind
-      }
+      yield network
     }
   }
+
+  network.identifier = () => `${networkName}`
+
+  return network;
 }
