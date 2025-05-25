@@ -1,0 +1,19 @@
+{
+  "name": "onet",
+  "version": "1.0.0",
+  "description": "A simple node/edge network model for things",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "network",
+    "node",
+    "edge"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^11.5.0"
+  }
+}
