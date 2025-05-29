@@ -8,15 +8,15 @@ const thing = (()=>({}))
 
 
 /**
- * grow a tree
+ * grow a tube
  * 
- * @param {string} name a nice little name for your tree 
- * @returns a buddable tree
+ * @param {string} name a nice little name for your tube 
+ * @returns a buddable tube
  */
 
-export const tree = () => {
+export const tube = () => {
   // thing poops out a new thing
-  // this will grow into our tree
+  // this will grow into our tube
   const me = thing()
 
   // won't you be my neighbor? my bud? 
@@ -36,5 +36,5 @@ export const tree = () => {
     }
   }
 
-  return tree;
+  return tube;
 }
