@@ -9,14 +9,19 @@ const tube = require('./tube.js')
  * 
  */
 export const tree = () => {
-  // a tree is just a tube
-  const tree = tube();
+  const tubes = [];
 
-  // that buds
-  const buds = [];
-  tree.bud = () => {
-    // what does this do?
+  const bud = () => {
+    tubes = [
+      ...tubes,
+      tube()
+    ];
   }
+
+  // a tree is just a tube
+  const tree = tube({
+    bud
+  });
 
   return tree;
 }

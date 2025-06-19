@@ -2,21 +2,27 @@ const thing = require('./thing.js')
 
 /**
  * a tube is like a thing, that
- * can ummmm, like grow, i guess.
+ * can ummmm, like strrrretch, 
+ * i guuuuuuuuuuuuuuuuuuuuuess.
  * 
- * @returns a growable tube
+ * @returns a stretchable tube
  */
 
 export const tube = () => {
-  // a tube is just a thing
-  const tube = thing({
-    grow 
-  });
+  const things = [];
 
-  // that grows
-  tube.grow = () => {
-    // what does this do?
+  const stretch = () => {
+    things = [
+      ...things,
+      thing()
+    ];
   }
+
+  // a tube is just a stretchy 
+  // thing
+  const tube = thing({
+    stretch
+  });
 
   return tube;
 }
