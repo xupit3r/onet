@@ -1,39 +1,21 @@
-
-/* 
-  think of this as a cell.
-  everything we build, will
-  be built using this. */
-const thing = (()=>({}))
-
-
+const thing = require('./thing.js')
 
 /**
- * grow a tube
+ * a tube is like a thing, that
+ * can ummmm, like grow, i guess.
  * 
- * @param {string} name a nice little name for your tube 
- * @returns a buddable tube
+ * @returns a growable tube
  */
 
 export const tube = () => {
-  // thing poops out a new thing
-  // this will grow into our tube
-  const me = thing()
+  // a tube is just a thing
+  const tube = thing({
+    grow 
+  });
 
-  // won't you be my neighbor? my bud? 
-  // then, your neighbors can be my buds!
-  // maybe?!?!? nah, that is how it works.
-  const buds = []
-
-  // a new bud pops
-  me.bud = function* () {
-    buds = [
-      ...buds, 
-      thing({})
-    ];
-
-    while (true) {
-      yield me
-    }
+  // that grows
+  tube.grow = () => {
+    // what does this do?
   }
 
   return tube;
